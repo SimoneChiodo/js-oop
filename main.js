@@ -16,3 +16,29 @@
 // Successivamente:
 // Istanziamo una nuova Automobile (Opel, 2020, nera, con 4 porte, a benzina)
 // Stampiamo il numero di porte e il tipo di carburante.
+
+class Veicolo {
+    marca;
+    anno;
+    colore;
+
+    constructor(marca, anno, colore) {
+        this.marca = marca;
+        this.anno = anno;
+        this.colore = colore;
+    }
+
+    informazioni() {
+        return `${this.marca}, ${this.anno}, ${this.colore}`;
+    }
+
+    calcolaEta() {
+        const date = new Date();
+        return date.getFullYear() - this.anno;
+    }
+}
+
+const fiat = new Veicolo("Fiat", 2019, "blu");
+console.log(fiat);
+console.log(fiat.informazioni());
+console.log(fiat.calcolaEta());
